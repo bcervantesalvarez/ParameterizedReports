@@ -35,8 +35,6 @@ ds <- ds %>%
 glimpse(ds)
 ```
 
-## Setting Plot Theme
-
 ```{r include=FALSE}
 myTheme <- function(){ 
     font <- "SF Mono"   #assign font family up front

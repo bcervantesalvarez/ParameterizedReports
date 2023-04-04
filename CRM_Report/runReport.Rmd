@@ -5,7 +5,7 @@ render_one <- function(year) {
   # assuming the output format of input.Rmd is PDF
   rmarkdown::render(
     'input.Rmd',
-    output_file = paste0(year, '.html'),
+    output_file = paste0("CRM_Report-",year, '.html'),
     params = list(year = year),
     envir = parent.frame()
   )
