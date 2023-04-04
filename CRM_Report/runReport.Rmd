@@ -1,0 +1,21 @@
+
+## Function to Run 
+```{r}
+render_one <- function(year) {
+  # assuming the output format of input.Rmd is PDF
+  rmarkdown::render(
+    'input.Rmd',
+    output_file = paste0(year, '.html'),
+    params = list(year = year),
+    envir = parent.frame()
+  )
+}
+```
+
+## Render ALL Reports
+
+```{r}
+for (year in 2019:2022) {
+    render_one(year)
+}
+```
